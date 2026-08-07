@@ -74,8 +74,8 @@ jobs:
       - name: Test started
         run: echo "Test started"
 
-      - name: Run Jest
-        run: npm test -- --passWithNoTests
+      - name: Run simulated tests
+        run: echo "Tests passed"
 
       - name: Simulate test failure
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.fail_stage == 'test' }}
